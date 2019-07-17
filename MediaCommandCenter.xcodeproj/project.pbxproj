@@ -13,6 +13,7 @@
 		81B999F822DFD99C00B325D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B999F622DFD99C00B325D6 /* Main.storyboard */; };
 		81B999FA22DFD99D00B325D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B999F922DFD99D00B325D6 /* Assets.xcassets */; };
 		81B999FD22DFD99D00B325D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B999FB22DFD99D00B325D6 /* LaunchScreen.storyboard */; };
+		81B99A0522DFD9F700B325D6 /* MediaCommandCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B99A0422DFD9F700B325D6 /* MediaCommandCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		81B999F922DFD99D00B325D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81B999FC22DFD99D00B325D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81B999FE22DFD99D00B325D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81B99A0422DFD9F700B325D6 /* MediaCommandCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCommandCenter.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		81B999EF22DFD99C00B325D6 /* MediaCommandCenter */ = {
 			isa = PBXGroup;
 			children = (
+				81B99A0422DFD9F700B325D6 /* MediaCommandCenter.swift */,
 				81B999F022DFD99C00B325D6 /* AppDelegate.swift */,
 				81B999F222DFD99C00B325D6 /* SceneDelegate.swift */,
 				81B999F422DFD99C00B325D6 /* ViewController.swift */,
@@ -141,6 +144,7 @@
 				81B999F522DFD99C00B325D6 /* ViewController.swift in Sources */,
 				81B999F122DFD99C00B325D6 /* AppDelegate.swift in Sources */,
 				81B999F322DFD99C00B325D6 /* SceneDelegate.swift in Sources */,
+				81B99A0522DFD9F700B325D6 /* MediaCommandCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
