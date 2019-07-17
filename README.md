@@ -1,5 +1,5 @@
 # MediaCommandKit
-Observe and Hijack iOS Media Remote Commands (Volume, Play / Pause, etc.)
+Observe and Hijack iOS Media Remote Commands (Volume, Play / Pause, etc.). This could be helpful for music players, camera, or event mapping control events from bluetooth media controllers such as the [Ortho Remote](https://teenage.engineering/products/orthoremote) to be used as generic controllers.
 
 
 ## Observable Events
@@ -34,7 +34,7 @@ Observe and Hijack iOS Media Remote Commands (Volume, Play / Pause, etc.)
 ## How to use
 
 ### Begin observing
-\> iOS 13:
+\>= iOS 13:
 
 In `SceneDelegate`, call `MediaCommandCenter`'s prepare and resign methods.
 
