@@ -38,7 +38,7 @@ Observe iOS system media player and remote commands (Volume, Play / Pause, etc.)
 
 In `SceneDelegate`, call `MediaCommandCenter`'s prepare and resign methods.
 
-```
+```swift
 func sceneDidBecomeActive(_ scene: UIScene) {
     MediaCommandCenter.prepareToBecomeActive()
 }
@@ -51,7 +51,7 @@ func sceneWillResignActive(_ scene: UIScene) {
 < iOS 13:
 
 In `AppDelegate`, call `MediaCommandCenter`'s prepare and resign methods.
-```
+```swift
 func applicationDidBecomeActive(_ application: UIApplication) {
     MediaCommandCenter.prepareToBecomeActive()
 }
@@ -63,13 +63,13 @@ func applicationWillResignActive(_ application: UIApplication) {
 
 ### Setup the observer
 Add the observing object as an observer and set commands to observe:
-```
+```swift
 MediaCommandCenter.addObserver(self)
 MediaCommandCenter.observedCommands = [.volume, .togglePlayPause]
 ```
 
 Conform to the `MediaCommandObserver` protocol:
-```
+```swift
 extension MyObject: MediaCommandObserver {
     
     func mediaCommandCenterHandleTogglePlayPause() {
@@ -86,7 +86,7 @@ extension MyObject: MediaCommandObserver {
 ```
 
 Remove the observing object on deinit:
-```
+```swift
 deinit {
     MediaCommandCenter.removeObserver(self)
 }
