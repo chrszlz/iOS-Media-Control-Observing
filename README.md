@@ -1,4 +1,4 @@
-# MediaCommandKit
+# MediaCommandKit (iOS Media Player Command Observing)
 Observe and Hijack iOS Media Remote Commands (Volume, Play / Pause, etc.). This could be helpful for music players, camera, or event mapping control events from bluetooth media controllers such as the [Ortho Remote](https://teenage.engineering/products/orthoremote) to be used as generic controllers.
 
 
