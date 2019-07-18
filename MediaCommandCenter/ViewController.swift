@@ -16,10 +16,7 @@ class ViewController: UIViewController {
         label.textColor = .white
         label.numberOfLines = 0
         label.textAlignment = .center
-        
-        // Default text
         label.text = "-"
-        
         return label
     }()
     
@@ -33,24 +30,32 @@ class ViewController: UIViewController {
         valueLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        // Begin Media Command observing
+        /// Begin Media Command observing
         MediaCommandCenter.addObserver(self)
+        MediaCommandCenter.observedCommands = [.volume, .togglePlayPause]
+        ///
+    }
+    
+    deinit {
+        /// Remove observers
+        MediaCommandCenter.removeObserver(self)
+        ///
     }
     
 }
 
 extension ViewController: MediaCommandObserver {
-    
-    func mediaCommandDidTogglePlayPause() {
-        UIView.animate(withDuration: 0.5) {
-            self.valueLabel.transform = self.valueLabel.transform.rotated(by: .pi)
-        }
-    }
-    
-    func mediaCommandDidUpdateVolume(_ volume: Double) {
+
+    func mediaCommandCenterHandleVolumeChanged(_ volume: Double) {
         // Format volume value to 2 decimal places - [0.00, 1.00]
         valueLabel.text = String(format: "%.2f", volume)
     }
     
+    func mediaCommandCenterHandleTogglePlayPause() {
+        UIView.animate(withDuration: 0.5) {
+            self.valueLabel.transform = self.valueLabel.transform.rotated(by: .pi)
+        }
+    }
+
 }
 
