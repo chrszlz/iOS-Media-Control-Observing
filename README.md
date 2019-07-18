@@ -4,10 +4,10 @@ Observe and Hijack iOS Media Remote Commands (Volume, Play / Pause, etc.). This 
 
 ## Observable Events
 * `volume`
-* `pauseCommand`
-* `playCommand`
-* `stopCommand`
 * `togglePlayPauseCommand`
+* `playCommand`
+* `pauseCommand`
+* `stopCommand`
 * `enableLanguageOptionCommand`
 * `disableLanguageOptionCommand`
 * `changePlaybackRateCommand`
@@ -62,18 +62,21 @@ func applicationWillResignActive(_ application: UIApplication) {
 ```
 
 ### Setup the observer
-Add the observing object as an observer:
-```MediaCommandCenter.addObserver(self)```
+Add the observing object as an observer and set commands to observe:
+```
+MediaCommandCenter.addObserver(self)
+MediaCommandCenter.observedCommands = [.volume, .togglePlayPause]
+```
 
 Conform to the `MediaCommandObserver` protocol:
 ```
 extension MyObject: MediaCommandObserver {
     
-    func mediaCommandDidTogglePlayPause() {
+    func mediaCommandCenterHandleTogglePlayPause() {
         // Handle play/pause toggle
     }
     
-    func mediaCommandDidUpdateVolume(_ volume: Double) {
+    func mediaCommandCenterHandleVolumeChanged(_ volume: Double) {
         // Handle volume change 
     }
     
@@ -88,6 +91,9 @@ deinit {
     MediaCommandCenter.removeObserver(self)
 }
 ```
+
+### Play your own music
+Set the `audioPlayer` instance in `MediaCommandCenter`, otherwise the default audio track of 00:00 length silence will play.
 
 
 ## How it works
