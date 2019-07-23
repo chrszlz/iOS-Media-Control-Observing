@@ -1,5 +1,5 @@
 # MediaCommandKit (iOS Media Player Command Observing)
-Observe iOS system media player and remote commands (Volume, Play / Pause, etc.). This is useful for music players, camera sutter buttons, or even hijacking control events from bluetooth media controllers such as the [Ortho Remote](https://teenage.engineering/products/orthoremote) for prototyping.
+Observe iOS system media player and media player remote commands (Volume, Play / Pause, etc.). Use this to control a music player, trigger a shutter button or hijack events from media remotes such as the [Ortho Remote](https://teenage.engineering/products/orthoremote).
 
 
 ## Observable Events
@@ -28,7 +28,7 @@ Observe iOS system media player and remote commands (Volume, Play / Pause, etc.)
 
 ## Installation
 1. Copy `MediaCommandCenter.swift` to your project and ensure it is included in `Build Phases` > `Compile Sources`.
-2. Copy `silence.m4a` into `Assets.xcassets`.
+2. Copy `silence.m4a` into `Assets.xcassets`. (If you are not playing audio of your own.)
 
 
 ## How to use
